@@ -2,8 +2,10 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="com.spring.ex01.PersonService"/>
     <fullyQualifiedTypeName name="com.spring.ex01.PersonServiceImpl"/>
+    <fullyQualifiedTypeName name="com.spring.ex02.PersonService"/>
+    <fullyQualifiedTypeName name="com.spring.ex03.MemberDAO"/>
+    <fullyQualifiedTypeName name="org.springframework.core.io.FileSystemResource"/>
+    <fullyQualifiedTypeName name="com.spring.ex03.MemberService"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.BeanFactory"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.xml.XmlBeanFactory"/>
-    <fullyQualifiedTypeName name="org.springframework.core.io.FileSystemResource"/>
-    <fullyQualifiedTypeName name="com.spring.ex02.PersonService"/>
 </qualifiedTypeNameHistroy>
