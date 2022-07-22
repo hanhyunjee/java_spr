@@ -25,9 +25,9 @@ public class MemberServlet extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
 		MemberDAO dao = new MemberDAO();
-		List<MemberVO> membersList = dao.selectAllMemberList();	//dao를 실행
+		List<MemberVO> membersList = dao.selectAllMemberList();
 		request.setAttribute("membersList", membersList);
-		RequestDispatcher dispatch = request.getRequestDispatcher("test01/listMembers.jsp");	// listMembers.jsp에 출력해라
+		RequestDispatcher dispatch = request.getRequestDispatcher("test01/listMembers.jsp");
 		dispatch.forward(request, response);
 	}
 }

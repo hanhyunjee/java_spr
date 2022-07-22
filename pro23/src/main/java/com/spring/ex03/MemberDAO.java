@@ -26,7 +26,6 @@ public class MemberDAO {
 		}
 		return sqlMapper;
 	}
-
 	public List<MemberVO> selectAllMemberList() {
 		sqlMapper = getInstance();
 		SqlSession session = sqlMapper.openSession();
@@ -35,19 +34,21 @@ public class MemberDAO {
 		return memlist;
 	}
 
-	public MemberVO selectMemberById(String id) {
-		sqlMapper = getInstance();
-		SqlSession session = sqlMapper.openSession();
-		MemberVO memberVO = session.selectOne("mapper.member.selectMemberById", id);
-		return memberVO;
-	}
+	public MemberVO selectMemberById(String id){
+	      sqlMapper=getInstance();
+	SqlSession session=sqlMapper.openSession();
+	      MemberVO memberVO=session.selectOne("mapper.member.selectMemberById",id);
+	      return memberVO;		
+	   }
 
 	public List<MemberVO> selectMemberByPwd(int pwd) {
-		sqlMapper = getInstance();
-		SqlSession session = sqlMapper.openSession();
-		List<MemberVO> membersList = null;
-		membersList = session.selectList("mapper.member.selectMemberByPwd", pwd);
-		return membersList;
+	sqlMapper = getInstance();
+	SqlSession session = sqlMapper.openSession();
+	List<MemberVO> membersList = null;
+	membersList= session.selectList("mapper.member.selectMemberByPwd", pwd);
+	return membersList;
 	}
+
+
 
 }

@@ -14,25 +14,22 @@ import com.spring.ex01.MemberVO;
 
 @WebServlet("/mem3.do")
 public class MemberServlet extends HttpServlet {
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)	throws ServletException, IOException {
 		doHandle(request, response);
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doHandle(request, response);
 	}
 
-	private void doHandle(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	private void doHandle(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		MemberDAO dao = new MemberDAO();
 		MemberVO memberVO = new MemberVO();
 		String action = request.getParameter("action");
 		String nextPage = "";
 
-		if (action == null || action.equals("listMembers")) {
+		if (action== null || action.equals("listMembers")) {
 			List<MemberVO> membersList = dao.selectAllMemberList();
 			request.setAttribute("membersList", membersList);
 			nextPage = "test02/listMembers.jsp";
@@ -47,9 +44,11 @@ public class MemberServlet extends HttpServlet {
 			request.setAttribute("membersList", membersList);
 			nextPage = "test02/listMembers.jsp";
 		}
-
-		RequestDispatcher dispatch = request.getRequestDispatcher(nextPage);
+		
+		
+		RequestDispatcher dispatch = request.getRequestDispatcher(nextPage);  
 		dispatch.forward(request, response);
+
 
 	}
 }

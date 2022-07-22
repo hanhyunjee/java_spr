@@ -30,7 +30,7 @@ public class MemberDAO {
 		sqlMapper = getInstance();
 		SqlSession session = sqlMapper.openSession();
 		List<MemberVO> memlist = null;
-		memlist = session.selectList("mapper.member.selectAllMemberList");  //mapper를 불러옴
+		memlist = session.selectList("mapper.member.selectAllMemberList");
 		return memlist;
 	}
 }
